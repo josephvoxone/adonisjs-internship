@@ -6,7 +6,7 @@ export default class DailyReport extends BaseModel {
   public id: number
 
   @column()
-  public depletion: string
+  public depletion: number
 
   @column()
   public feed_intake: number

@@ -9,7 +9,7 @@ export default class Kandang extends BaseModel {
   public name: string
 
   @column()
-  public type: boolean
+  public type: string
 
   @column()
   public status: boolean
