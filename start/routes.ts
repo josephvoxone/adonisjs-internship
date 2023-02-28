@@ -41,3 +41,21 @@ Route.put('/karyawan/:id', 'KaryawanController.update')
 // Menghapus data karyawan berdasarkan ID (soft delete)
 Route.delete('/karyawan/:id', 'KaryawanController.destroy')
 // }).middleware('auth')
+
+// API Mitra
+// Route.group(() => {
+// Menampilkan semua data mitra
+Route.get('/mitra', 'MitraController.index')
+
+// Menampilkan detail data mitra berdasarkan ID
+Route.get('/mitra/:id', 'MitraController.show')
+
+// Menambahkan data mitra baru
+Route.post('/mitra', 'MitraController.store')
+
+// Mengupdate data mitra berdasarkan ID
+Route.put('/mitra/:id', 'MitraController.update')
+
+// Menghapus data mitra berdasarkan ID (soft delete)
+Route.delete('/mitra/:id', 'MitraController.destroy')
+// }).middleware('auth')
