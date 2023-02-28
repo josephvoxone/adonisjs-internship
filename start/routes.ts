@@ -59,3 +59,75 @@ Route.put('/mitra/:id', 'MitraController.update')
 // Menghapus data mitra berdasarkan ID (soft delete)
 Route.delete('/mitra/:id', 'MitraController.destroy')
 // }).middleware('auth')
+
+// API Kandang
+// Route.group(() => {
+// Menampilkan semua data kandang
+Route.get('/kandang', 'KandangsController.index')
+
+// Menampilkan detail data kandang berdasarkan ID
+Route.get('/kandang/:id', 'KandangCsontroller.show')
+
+// Menambahkan data kandang baru
+Route.post('/kandang', 'KandangsController.store')
+
+// Mengupdate data kandang berdasarkan ID
+Route.put('/kandang/:id', 'KandangsController.update')
+
+// Menghapus data kandang berdasarkan ID (soft delete)
+Route.delete('/kandang/:id', 'KandangsController.destroy')
+// }).middleware('auth')
+
+// API Daily_Report
+// Route.group(() => {
+// Menampilkan semua data daily_report
+Route.get('/daily_report', 'DailyReportsController.index')
+
+// Menampilkan detail data daily_report berdasarkan ID
+Route.get('/daily_report/:id', 'DailyReportsController.show')
+
+// Menambahkan data daily_report baru
+Route.post('/daily_report', 'DailyReportsController.store')
+
+// Mengupdate data daily_report berdasarkan ID
+Route.put('/daily_report/:id', 'DailyReportsController.update')
+
+// Menghapus data daily_report berdasarkan ID (soft delete)
+Route.delete('/daily_report/:id', 'DailyReportsController.destroy')
+// }).middleware('auth')
+
+// API Sapronak
+// Route.group(() => {
+// Menampilkan semua data sapronak
+Route.get('/sapronak', 'SapronaksController.index')
+
+// Menampilkan detail data sapronak berdasarkan ID
+Route.get('/sapronak/:id', 'SapronaksController.show')
+
+// Menambahkan data sapronak baru
+Route.post('/sapronak', 'SapronaksController.store')
+
+// Mengupdate data sapronak berdasarkan ID
+Route.put('/sapronak/:id', 'SapronaksController.update')
+
+// Menghapus data sapronak berdasarkan ID (soft delete)
+Route.delete('/sapronak/:id', 'SapronaksController.destroy')
+// }).middleware('auth')
+
+// API Daily_Log
+// Route.group(() => {
+// Menampilkan semua data daily_log
+Route.get('/daily_log', 'DailyLogsController.index')
+
+// Menampilkan detail data daily_log berdasarkan ID
+Route.get('/daily_log/:id', 'DailyLogsController.show')
+
+// Menambahkan data daily_log baru
+Route.post('/daily_log', 'DailyLogsController.store')
+
+// Mengupdate data daily_log berdasarkan ID
+Route.put('/daily_log/:id', 'DailyLogsController.update')
+
+// Menghapus data daily_log berdasarkan ID (soft delete)
+Route.delete('/daily_log/:id', 'DailyLogsController.destroy')
+// }).middleware('auth')
