@@ -66,7 +66,7 @@ Route.delete('/mitra/:id', 'MitraController.destroy')
 Route.get('/kandang', 'KandangsController.index')
 
 // Menampilkan detail data kandang berdasarkan ID
-Route.get('/kandang/:id', 'KandangCsontroller.show')
+Route.get('/kandang/:id', 'KandangsController.show')
 
 // Menambahkan data kandang baru
 Route.post('/kandang', 'KandangsController.store')
