@@ -7,28 +7,28 @@ export default class extends BaseSeeder {
     await Kandang.createMany([
       {
         name: 'Kandang Ayam',
-        type:'terbuka',
+        type:'open',
         status: true,
         address: 'ketintang',
         city: 'Surabaya',
          },
        {
         name: 'Niwatori',
-        type:'tertutup',
+        type:'closed',
         status: true,
         address: 'Wonocolo',
         city: 'Surabaya',
          },
         {
         name: 'Best DOC',
-        type:'tertutup',
+        type:'closed',
         status: false,
         address: 'Ohio',
         city: 'Sukabumi',
          },
          {
         name: 'Citadel Center',
-        type:'terbuka',
+        type:'open',
         status: false,
         address: 'Maria Wall',
         city: 'Paradis',
