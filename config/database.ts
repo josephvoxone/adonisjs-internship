@@ -36,11 +36,11 @@ const databaseConfig: DatabaseConfig = {
     pg: {
       client: 'pg',
       connection: {
-        host: Env.get('PG_HOST'),
-        port: Env.get('PG_PORT'),
-        user: Env.get('PG_USER'),
+        host: Env.get('PG_HOST', 'localhost'),
+        port: Env.get('PG_PORT', 5432),
+        user: Env.get('PG_USER', 'postgres'),
         password: Env.get('PG_PASSWORD', 'root'),
-        database: Env.get('PG_DB_NAME'),
+        database: Env.get('PG_DB_NAME', 'adonisjs'),
       },
       migrations: {
         naturalSort: true,
