@@ -7,6 +7,7 @@ export default class extends BaseSeeder {
     await Kandang.createMany([
       {
         name: 'Kandang Ayam',
+        password: 'admin',
         type:'open',
         status: true,
         address: 'ketintang',
@@ -14,6 +15,7 @@ export default class extends BaseSeeder {
          },
        {
         name: 'Niwatori',
+        password: 'admin',
         type:'closed',
         status: true,
         address: 'Wonocolo',
@@ -21,6 +23,7 @@ export default class extends BaseSeeder {
          },
         {
         name: 'Best DOC',
+        password: 'admin',
         type:'closed',
         status: false,
         address: 'Ohio',
@@ -28,6 +31,7 @@ export default class extends BaseSeeder {
          },
          {
         name: 'Citadel Center',
+        password: 'admin',
         type:'open',
         status: false,
         address: 'Maria Wall',
