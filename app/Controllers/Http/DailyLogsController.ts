@@ -7,7 +7,7 @@ export default class DailyLogsController {
      * Menampilkan semua data dailylog
      */
     public async index({ response }: HttpContextContract) {
-        const dailylog = await DailyLog.query().whereNull('deleted_at').orderBy('id', 'asc')
+        const dailylog = await DailyLog.query().whereNull('deleted_at').orderBy('id', 'asc').preload('user').preload('kandang').preload('mitra')
         return response.ok(dailylog)
     }
 

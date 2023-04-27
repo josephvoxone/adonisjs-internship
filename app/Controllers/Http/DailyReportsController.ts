@@ -24,9 +24,8 @@ export default class DailyReportsController {
     Membuat data dailyreport baru
     */
     public async store({ request, response }: HttpContextContract) {
-        const data = request.only(['depletion', 'id_kandang', 'feed_intake', 'avg_bw'])
+        const data = request.only(['depletion', 'feed_intake', 'avg_bw'])
         const dailyreport = new DailyReport()
-        dailyreport.id_kandang = data.id_kandang
         dailyreport.depletion = data.depletion
         dailyreport.feed_intake = data.feed_intake
         dailyreport.avg_bw = data.avg_bw

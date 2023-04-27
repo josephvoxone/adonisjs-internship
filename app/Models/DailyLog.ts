@@ -1,5 +1,8 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, BelongsTo, belongsTo} from '@ioc:Adonis/Lucid/Orm'
+import Karyawan from 'App/Models/Karyawan';
+import Kandang from 'App/Models/Kandang';
+import Mitra from 'App/Models/Mitra';
 
 export default class DailyLog extends BaseModel {
   @column({ isPrimary: true })
@@ -23,6 +26,15 @@ export default class DailyLog extends BaseModel {
   @column()
   public reason: string
 
+  @belongsTo(() => Karyawan, { foreignKey: 'id_user' })
+  public user: BelongsTo<typeof Karyawan>;
+
+  @belongsTo(() => Kandang, { foreignKey: 'id_kandang' })
+  public kandang: BelongsTo<typeof Kandang>;
+
+  @belongsTo(() => Mitra, { foreignKey: 'id_mitra' })
+  public mitra: BelongsTo<typeof Mitra>;
+  
   @column.dateTime({ autoCreate: true })
   public created_at: DateTime
 
