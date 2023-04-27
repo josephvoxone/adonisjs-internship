@@ -10,7 +10,7 @@ export default class extends BaseSchema {
       table.integer('id_kandang', 255).notNullable()
       table.integer('depletion', 255).notNullable()
       table.integer('feed_intake', 255).notNullable()
-      table.integer('avg_bw').notNullable()
+      table.integer('avg_bw', 255).notNullable()
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
       table.dateTime('deleted_at', { useTz: true })

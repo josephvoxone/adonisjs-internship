@@ -9,9 +9,6 @@ export default class Kandang extends BaseModel {
   public name: string
 
   @column()
-  public password: string
-
-  @column()
   public type: string
 
   @column()

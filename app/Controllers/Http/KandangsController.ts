@@ -24,10 +24,9 @@ export default class KandangsController {
     Membuat data kandang baru
     */
     public async store({ request, response }: HttpContextContract) {
-        const data = request.only(['name', 'password', 'type', 'status', 'address', 'city'])
+        const data = request.only(['name', 'type', 'status', 'address', 'city'])
         const kandang = new Kandang()
         kandang.name = data.name
-        kandang.password = data.password
         kandang.type = data.type
         kandang.status = data.status
         kandang.address = data.address
@@ -42,10 +41,9 @@ export default class KandangsController {
     Mengupdate data kandang berdasarkan ID
     */
     public async update({ params, request, response }: HttpContextContract) {
-        const data = request.only(['name', 'password', 'type', 'status', 'address', 'city'])
+        const data = request.only(['name', 'type', 'status', 'address', 'city'])
         const kandang = await Kandang.findOrFail(params.id)
         kandang.name = data.name
-        kandang.password = data.password
         kandang.type = data.type
         kandang.status = data.status
         kandang.address = data.address

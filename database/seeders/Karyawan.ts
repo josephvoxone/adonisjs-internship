@@ -7,6 +7,7 @@ export default class extends BaseSeeder {
     await Karyawan.createMany([
       {
         name: 'Allen Walker',
+        password: 'admin',
         role: true,
         phone:'087771312756',
         gender: true,
@@ -14,6 +15,7 @@ export default class extends BaseSeeder {
          },
        {
         name: 'Alison Middleford',
+        password: 'admin',
         role: true,
         phone:'084441312756',
         gender: true,
@@ -21,6 +23,7 @@ export default class extends BaseSeeder {
          },
        {
         name: 'Alhaitham',
+        password: 'admin',
         role: true,
         phone:'083331312756',
         gender: true,
@@ -28,6 +31,7 @@ export default class extends BaseSeeder {
        },
        {
         name: 'Lu Guang',
+        password: 'admin',
         role: true,
         phone:'089991312756',
         gender: true,

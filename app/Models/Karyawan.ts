@@ -9,6 +9,9 @@ export default class Karyawan extends BaseModel {
   public name: string
 
   @column()
+  public password: string
+
+  @column()
   public role: boolean
 
   @column()
