@@ -20,6 +20,15 @@ export default class DailyReport extends BaseModel {
   @column()
   public avg_bw: number
 
+  @column()
+  public created_by: number
+
+  @column()
+  public updated_by: number
+
+  @column()
+  public date: DateTime
+
   @column.dateTime({ autoCreate: true })
   public created_at: DateTime
 
