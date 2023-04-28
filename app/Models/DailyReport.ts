@@ -6,6 +6,9 @@ export default class DailyReport extends BaseModel {
   public id: number
 
   @column()
+  public time: number
+
+  @column()
   public id_kandang: number
 
   @column()
@@ -19,6 +22,12 @@ export default class DailyReport extends BaseModel {
 
   @column()
   public avg_bw: number
+
+  @column()
+  public create_by: number
+
+  @column()
+  public update_by: number
 
   @column.dateTime({ autoCreate: true })
   public created_at: DateTime
