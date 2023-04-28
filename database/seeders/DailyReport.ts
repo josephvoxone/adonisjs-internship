@@ -7,7 +7,7 @@ export default class extends BaseSeeder {
     await DailyReport.createMany([
       {
         reason: "mass depletion",
-        time: 3/28/2023,
+        time: "3/28/2023",
         id_kandang: 2,
         depletion: 100,
         feed_intake: 250,
@@ -17,7 +17,7 @@ export default class extends BaseSeeder {
       },
       {
         reason: "door error",
-        time: 4/09/2023,
+        time: "4/9/2023",
         id_kandang: 1,
         depletion: 200,
         feed_intake: 20,
@@ -27,7 +27,7 @@ export default class extends BaseSeeder {
       },
       {
         reason: "post-pandemic care",
-        time: 4/12/2023,
+        time: "4/12/2023",
         id_kandang: 3,
         depletion: 80,
         feed_intake: 30,
@@ -37,7 +37,7 @@ export default class extends BaseSeeder {
       },
       {
         reason: "Cannibalism amongs chickens",
-        time: 4/23/2023,
+        time: "4/23/2023",
         id_kandang: 2,
         depletion: 330,
         feed_intake: 180,
