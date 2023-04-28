@@ -47,7 +47,8 @@ export default class DailyReportsController {
       .whereBetween('date', [threeDaysAgo, today])
       .where('id_kandang', params.id)
       .whereNull('deleted_at')
-      .orderBy('date', 'asc')
+      .orderBy('date', 'desc')
+      .limit(30)
 
     const data: any = {
       'Deplesi': [],

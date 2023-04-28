@@ -9,16 +9,19 @@ export default class Karyawan extends BaseModel {
   public name: string
 
   @column()
+  public email: string
+
+  @column()
   public password: string
 
   @column()
-  public role: boolean
+  public role: string
 
   @column()
   public phone: string
 
   @column()
-  public gender: boolean
+  public gender: number
 
   @column()
   public status: boolean
@@ -31,4 +34,10 @@ export default class Karyawan extends BaseModel {
 
   @column.dateTime({ serializeAs: null })
   public deleted_at: DateTime
+
+  // Metode untuk menghapus password dari data pengguna
+  public toJSON() {
+    const { password, deleted_at, ...attributes } = this.$attributes
+    return attributes
+  }
 }

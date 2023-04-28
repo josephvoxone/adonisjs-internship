@@ -54,9 +54,12 @@
     "youch-terminal": "^2.2.0"
   },
   "dependencies": {
+    "@adonisjs/auth": "^8.2.3",
     "@adonisjs/core": "^5.8.0",
     "@adonisjs/lucid": "^18.3.0",
+    "@adonisjs/redis": "^7.3.2",
     "@adonisjs/repl": "^3.1.0",
+    "adonis5-jwt": "^1.1.7",
     "cors": "^2.8.5",
     "download": "^8.0.0",
     "luxon": "^3.2.1",
