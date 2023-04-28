@@ -6,7 +6,7 @@ export default class extends BaseSeeder {
     // Write your database queries inside the run method
     await Mitra.createMany([
       {
-        name: 'Allen Walker',
+        name: 'Lenalee Lee',
         phone:'087771312756',
         address: 'Ketintang',
         city: 'Surabaya',
