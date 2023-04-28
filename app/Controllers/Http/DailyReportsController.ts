@@ -90,15 +90,18 @@ export default class DailyReportsController {
     
     Mengupdate data dailyreport berdasarkan ID
     */
-  public async update({ params, request, response }: HttpContextContract) {
-    const data = request.only(['depletion', 'reason', 'feed_intake', 'avg_bw', 'id_kandang'])
-    const dailyreport = await DailyReport.findOrFail(params.id)
-    dailyreport.reason = data.reason
-    dailyreport.depletion = data.depletion
-    dailyreport.id_kandang = data.id_kandang
-    dailyreport.feed_intake = data.feed_intake
-    dailyreport.avg_bw = data.avg_bw
-    await dailyreport.save()
+    public async update({ params, request, response }: HttpContextContract) {
+        const data = request.only(['depletion', 'date', 'reason', 'feed_intake', 'avg_bw', 'id_kandang', 'create_by', 'update_by'])
+        const dailyreport = await DailyReport.findOrFail(params.id)
+        const identifier: any = request.header('Identifier')
+        dailyreport.reason = data.reason
+        dailyreport.date = data.date
+        dailyreport.depletion = data.depletion
+        dailyreport.id_kandang = data.id_kandang
+        dailyreport.feed_intake = data.feed_intake
+        dailyreport.avg_bw = data.avg_bw
+        dailyreport.created_by = identifier
+        await dailyreport.save()
 
     return response.ok(dailyreport)
   }

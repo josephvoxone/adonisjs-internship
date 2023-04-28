@@ -6,6 +6,9 @@ export default class DailyReport extends BaseModel {
   public id: number
 
   @column()
+  public time: string
+
+  @column()
   public id_kandang: number
 
   @column()
