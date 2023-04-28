@@ -86,6 +86,9 @@ Route.get('/daily_report', 'DailyReportsController.index')
 // Menampilkan detail data daily_report berdasarkan ID
 Route.get('/daily_report/:id', 'DailyReportsController.show')
 
+// Menampilkan detail data daily_report berdasarkan ID
+Route.get('/daily_report/index/:id', 'DailyReportsController.indexByKandang')
+
 // Menampilkan stats data daily_report berdasarkan ID
 Route.get('/daily_report/stats/:id', 'DailyReportsController.stats')
 
