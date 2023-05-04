@@ -26,9 +26,10 @@ export default class KaryawanController {
     Membuat data karyawan baru
     */
   public async store({ request, response }: HttpContextContract) {
-    const data = request.only(['name', 'role', 'phone', 'gender', 'status', 'password'])
+    const data = request.only(['name', 'email', 'role', 'phone', 'gender', 'status', 'password'])
     const karyawan = new Karyawan()
     karyawan.name = data.name
+    karyawan.email = data.email
     karyawan.password = data.password
     karyawan.role = data.role
     karyawan.phone = data.phone
@@ -44,9 +45,10 @@ export default class KaryawanController {
     Mengupdate data karyawan berdasarkan ID
     */
   public async update({ params, request, response }: HttpContextContract) {
-    const data = request.only(['name', 'role', 'phone', 'gender', 'status', 'password'])
+    const data = request.only(['name', 'email', 'role', 'phone', 'gender', 'status', 'password'])
     const karyawan = await Karyawan.findOrFail(params.id)
     karyawan.name = data.name
+    karyawan.email = data.email
     karyawan.password = data.password
     karyawan.role = data.role
     karyawan.phone = data.phone
