@@ -7,7 +7,12 @@ export default class DailyReportsController {
    * Menampilkan semua data dailyreport
    */
   public async index({ response }: HttpContextContract) {
-    const dailyreport = await DailyReport.query().whereNull('deleted_at').orderBy('id', 'desc')
+    const dailyreport = await DailyReport.query()
+      .preload('user_created')
+      .preload('user_updated')
+      .preload('kandang')
+      .whereNull('deleted_at')
+      .orderBy('id', 'desc')
     return response.ok(dailyreport)
   }
 
@@ -17,6 +22,9 @@ export default class DailyReportsController {
   public async show({ params, response }: HttpContextContract) {
     const dailyreport = await DailyReport.query()
       .where('id', params.id)
+      .preload('user_created')
+      .preload('user_updated')
+      .preload('kandang')
       .whereNull('deleted_at')
       .firstOrFail()
     return response.ok(dailyreport)
